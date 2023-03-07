@@ -1,0 +1,877 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="10dp"
+    android:background="@color/BG"
+    tools:context=".NewOrder">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical" >
+            <EditText
+                android:id="@+id/txt_tablenumber"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:layout_marginBottom="5dp"
+                android:hint="Table Number"
+                android:textColorHint="@color/black"
+                android:inputType="textCapSentences"
+                android:maxLines="1"/>
+            <EditText
+                android:id="@+id/txt_customername"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:layout_marginBottom="5dp"
+                android:hint="Customer Name"
+                android:textColorHint="@color/black"
+                android:inputType="textCapSentences"
+                android:maxLines="1"/>
+
+            <!-- Americano -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_marginTop="10dp"
+                android:orientation="horizontal">
+                <TextView
+                    android:layout_width="125dp"
+                    android:layout_height="30dp"
+                    android:hint="Americano"
+                    android:textColorHint="@color/black"
+                    android:textSize="20dp" />
+                <TextView
+                    android:id="@+id/price_Americano"
+                    android:layout_width="20dp"
+                    android:layout_height="30dp"
+                    android:hint="45"
+                    android:textColorHint="@color/black"
+                    android:textSize="15dp" />
+                <TextView
+                    android:layout_width="90dp"
+                    android:layout_height="30dp"
+                    android:hint="K"
+                    android:textColorHint="@color/black"
+                    android:textSize="15dp" />
+                <Button
+                    android:id="@+id/decrease_Americano"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:onClick="decreaseAmericano"
+                    android:text="-"/>
+                <TextView
+                    android:id="@+id/qty_Americano"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="15dp"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginRight="15dp"
+                    android:layout_marginBottom="10dp"
+                    android:text="0"
+                    android:textColor="@color/black"
+                    android:textSize="30dp"
+                    android:textStyle="bold" />
+                <Button
+                    android:id="@+id/increase_Americano"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:onClick="increaseAmericano"
+                    android:text="+" />
+            </LinearLayout>
+
+            <!-- Cappucino -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_marginTop="10dp"
+                android:orientation="horizontal">
+                <TextView
+                    android:layout_width="125dp"
+                    android:layout_height="30dp"
+                    android:hint="Cappucino"
+                    android:textColorHint="@color/black"
+                    android:textSize="20dp" />
+                <TextView
+                    android:id="@+id/price_Cappucino"
+                    android:layout_width="20dp"
+                    android:layout_height="30dp"
+                    android:hint="40"
+                    android:textColorHint="@color/black"
+                    android:textSize="15dp" />
+                <TextView
+                    android:layout_width="90dp"
+                    android:layout_height="30dp"
+                    android:hint="K"
+                    android:textColorHint="@color/black"
+                    android:textSize="15dp" />
+                <Button
+                    android:id="@+id/decrease_Cappucino"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:onClick="decreaseCappucino"
+                    android:text="-"/>
+                <TextView
+                    android:id="@+id/qty_Cappucino"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="15dp"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginRight="15dp"
+                    android:layout_marginBottom="10dp"
+                    android:text="0"
+                    android:textColor="@color/black"
+                    android:textSize="30dp"
+                    android:textStyle="bold" />
+                <Button
+                    android:id="@+id/increase_Cappucino"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:onClick="increaseCappucino"
+                    android:text="+" />
+            </LinearLayout>
+
+            <!-- Macchiato -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_marginTop="10dp"
+                android:orientation="horizontal">
+                <TextView
+                    android:layout_width="125dp"
+                    android:layout_height="30dp"
+                    android:hint="Macchiato"
+                    android:textColorHint="@color/black"
+                    android:textSize="20dp" />
+                <TextView
+                    android:id="@+id/price_Macchiato"
+                    android:layout_width="20dp"
+                    android:layout_height="30dp"
+                    android:hint="42"
+                    android:textColorHint="@color/black"
+                    android:textSize="15dp" />
+                <TextView
+                    android:layout_width="90dp"
+                    android:layout_height="30dp"
+                    android:hint="K"
+                    android:textColorHint="@color/black"
+                    android:textSize="15dp" />
+                <Button
+                    android:id="@+id/decrease_Macchiato"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:onClick="decreaseMacchiato"
+                    android:text="-"/>
+                <TextView
+                    android:id="@+id/qty_Macchiato"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="15dp"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginRight="15dp"
+                    android:layout_marginBottom="10dp"
+                    android:text="0"
+                    android:textColor="@color/black"
+                    android:textSize="30dp"
+                    android:textStyle="bold" />
+                <Button
+                    android:id="@+id/increase_Macchiato"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:onClick="increaseMacchiato"
+                    android:text="+" />
+            </LinearLayout>
+
+            <!-- Espresso -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_marginTop="10dp"
+                android:orientation="horizontal">
+                <TextView
+                    android:layout_width="125dp"
+                    android:layout_height="30dp"
+                    android:hint="Espresso"
+                    android:textColorHint="@color/black"
+                    android:textSize="20dp" />
+                <TextView
+                    android:id="@+id/price_Espresso"
+                    android:layout_width="20dp"
+                    android:layout_height="30dp"
+                    android:hint="40"
+                    android:textColorHint="@color/black"
+                    android:textSize="15dp" />
+                <TextView
+                    android:layout_width="90dp"
+                    android:layout_height="30dp"
+                    android:hint="K"
+                    android:textColorHint="@color/black"
+                    android:textSize="15dp" />
+                <Button
+                    android:id="@+id/decrease_Espresso"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:onClick="decreaseEspresso"
+                    android:text="-"/>
+                <TextView
+                    android:id="@+id/qty_Espresso"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="15dp"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginRight="15dp"
+                    android:layout_marginBottom="10dp"
+                    android:text="0"
+                    android:textColor="@color/black"
+                    android:textSize="30dp"
+                    android:textStyle="bold" />
+                <Button
+                    android:id="@+id/increase_Espresso"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:onClick="increaseEspresso"
+                    android:text="+" />
+            </LinearLayout>
+
+            <!-- Latte -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_marginTop="10dp"
+                android:orientation="horizontal">
+                <TextView
+                    android:layout_width="125dp"
+                    android:layout_height="30dp"
+                    android:hint="Latte"
+                    android:textColorHint="@color/black"
+                    android:textSize="20dp" />
+                <TextView
+                    android:id="@+id/price_Latte"
+                    android:layout_width="20dp"
+                    android:layout_height="30dp"
+                    android:hint="45"
+                    android:textColorHint="@color/black"
+                    android:textSize="15dp" />
+                <TextView
+                    android:layout_width="90dp"
+                    android:layout_height="30dp"
+                    android:hint="K"
+                    android:textColorHint="@color/black"
+                    android:textSize="15dp" />
+                <Button
+                    android:id="@+id/decrease_Latte"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:onClick="decreaseLatte"
+                    android:text="-"/>
+                <TextView
+                    android:id="@+id/qty_Latte"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="15dp"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginRight="15dp"
+                    android:layout_marginBottom="10dp"
+                    android:text="0"
+                    android:textColor="@color/black"
+                    android:textSize="30dp"
+                    android:textStyle="bold" />
+                <Button
+                    android:id="@+id/increase_Latte"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:onClick="increaseLatte"
+                    android:text="+" />
+            </LinearLayout>
+
+            <!-- Chocolate -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_marginTop="10dp"
+                android:orientation="horizontal">
+                <TextView
+                    android:layout_width="125dp"
+                    android:layout_height="30dp"
+                    android:hint="Chocolate"
+                    android:textColorHint="@color/black"
+                    android:textSize="20dp" />
+                <TextView
+                    android:id="@+id/price_Chocolate"
+                    android:layout_width="20dp"
+                    android:layout_height="30dp"
+                    android:hint="50"
+                    android:textColorHint="@color/black"
+                    android:textSize="15dp" />
+                <TextView
+                    android:layout_width="90dp"
+                    android:layout_height="30dp"
+                    android:hint="K"
+                    android:textColorHint="@color/black"
+                    android:textSize="15dp" />
+                <Button
+                    android:id="@+id/decrease_Chocolate"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:onClick="decreaseChocolate"
+                    android:text="-"/>
+                <TextView
+                    android:id="@+id/qty_Chocolate"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="15dp"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginRight="15dp"
+                    android:layout_marginBottom="10dp"
+                    android:text="0"
+                    android:textColor="@color/black"
+                    android:textSize="30dp"
+                    android:textStyle="bold" />
+                <Button
+                    android:id="@+id/increase_Chocolate"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:onClick="increaseChocolate"
+                    android:text="+" />
+            </LinearLayout>
+
+            <!-- Matcha Latte -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_marginTop="10dp"
+                android:orientation="horizontal">
+                <TextView
+                    android:layout_width="125dp"
+                    android:layout_height="30dp"
+                    android:hint="Matcha Latte"
+                    android:textColorHint="@color/black"
+                    android:textSize="20dp" />
+                <TextView
+                    android:id="@+id/price_MatchaLatte"
+                    android:layout_width="20dp"
+                    android:layout_height="30dp"
+                    android:hint="34"
+                    android:textColorHint="@color/black"
+                    android:textSize="15dp" />
+                <TextView
+                    android:layout_width="90dp"
+                    android:layout_height="30dp"
+                    android:hint="K"
+                    android:textColorHint="@color/black"
+                    android:textSize="15dp" />
+                <Button
+                    android:id="@+id/decrease_MatchaLatte"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:onClick="decreaseMatchaLatte"
+                    android:text="-"/>
+                <TextView
+                    android:id="@+id/qty_MatchaLatte"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="15dp"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginRight="15dp"
+                    android:layout_marginBottom="10dp"
+                    android:text="0"
+                    android:textColor="@color/black"
+                    android:textSize="30dp"
+                    android:textStyle="bold" />
+                <Button
+                    android:id="@+id/increase_MatchaLatte"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:onClick="increaseMatchaLatte"
+                    android:text="+" />
+            </LinearLayout>
+
+            <!-- Thai Tea -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_marginTop="10dp"
+                android:orientation="horizontal">
+                <TextView
+                    android:layout_width="125dp"
+                    android:layout_height="30dp"
+                    android:hint="Thai Tea"
+                    android:textColorHint="@color/black"
+                    android:textSize="20dp" />
+                <TextView
+                    android:id="@+id/price_ThaiTea"
+                    android:layout_width="20dp"
+                    android:layout_height="30dp"
+                    android:hint="30"
+                    android:textColorHint="@color/black"
+                    android:textSize="15dp" />
+                <TextView
+                    android:layout_width="90dp"
+                    android:layout_height="30dp"
+                    android:hint="K"
+                    android:textColorHint="@color/black"
+                    android:textSize="15dp" />
+                <Button
+                    android:id="@+id/decrease_ThaiTea"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:onClick="decreaseThaiTea"
+                    android:text="-"/>
+                <TextView
+                    android:id="@+id/qty_ThaiTea"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="15dp"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginRight="15dp"
+                    android:layout_marginBottom="10dp"
+                    android:text="0"
+                    android:textColor="@color/black"
+                    android:textSize="30dp"
+                    android:textStyle="bold" />
+                <Button
+                    android:id="@+id/increase_ThaiTea"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:onClick="increaseThaiTea"
+                    android:text="+" />
+            </LinearLayout>
+
+            <!-- Red Velvet -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_marginTop="10dp"
+                android:orientation="horizontal">
+                <TextView
+                    android:layout_width="125dp"
+                    android:layout_height="30dp"
+                    android:hint="Red Velvet"
+                    android:textColorHint="@color/black"
+                    android:textSize="20dp" />
+                <TextView
+                    android:id="@+id/price_RedVelvet"
+                    android:layout_width="20dp"
+                    android:layout_height="30dp"
+                    android:hint="32"
+                    android:textColorHint="@color/black"
+                    android:textSize="15dp" />
+                <TextView
+                    android:layout_width="90dp"
+                    android:layout_height="30dp"
+                    android:hint="K"
+                    android:textColorHint="@color/black"
+                    android:textSize="15dp" />
+                <Button
+                    android:id="@+id/decrease_RedVelvet"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:onClick="decreaseRedVelvet"
+                    android:text="-"/>
+                <TextView
+                    android:id="@+id/qty_RedVelvet"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="15dp"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginRight="15dp"
+                    android:layout_marginBottom="10dp"
+                    android:text="0"
+                    android:textColor="@color/black"
+                    android:textSize="30dp"
+                    android:textStyle="bold" />
+                <Button
+                    android:id="@+id/increase_RedVelvet"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:onClick="increaseRedVelvet"
+                    android:text="+" />
+            </LinearLayout>
+
+            <!-- Green Tea -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_marginTop="10dp"
+                android:orientation="horizontal">
+                <TextView
+                    android:layout_width="125dp"
+                    android:layout_height="30dp"
+                    android:hint="Green Tea"
+                    android:textColorHint="@color/black"
+                    android:textSize="20dp" />
+                <TextView
+                    android:id="@+id/price_GreenTea"
+                    android:layout_width="20dp"
+                    android:layout_height="30dp"
+                    android:hint="30"
+                    android:textColorHint="@color/black"
+                    android:textSize="15dp" />
+                <TextView
+                    android:layout_width="90dp"
+                    android:layout_height="30dp"
+                    android:hint="K"
+                    android:textColorHint="@color/black"
+                    android:textSize="15dp" />
+                <Button
+                    android:id="@+id/decrease_GreenTea"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:onClick="decreaseGreenTea"
+                    android:text="-"/>
+                <TextView
+                    android:id="@+id/qty_GreenTea"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="15dp"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginRight="15dp"
+                    android:layout_marginBottom="10dp"
+                    android:text="0"
+                    android:textColor="@color/black"
+                    android:textSize="30dp"
+                    android:textStyle="bold" />
+                <Button
+                    android:id="@+id/increase_GreenTea"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:onClick="increaseGreenTea"
+                    android:text="+" />
+            </LinearLayout>
+
+            <!-- Sweets -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_marginTop="10dp"
+                android:orientation="horizontal">
+                <TextView
+                    android:layout_width="125dp"
+                    android:layout_height="30dp"
+                    android:hint="Sweets"
+                    android:textColorHint="@color/black"
+                    android:textSize="20dp" />
+                <TextView
+                    android:id="@+id/price_Sweets"
+                    android:layout_width="20dp"
+                    android:layout_height="30dp"
+                    android:hint="30"
+                    android:textColorHint="@color/black"
+                    android:textSize="15dp" />
+                <TextView
+                    android:layout_width="90dp"
+                    android:layout_height="30dp"
+                    android:hint="K"
+                    android:textColorHint="@color/black"
+                    android:textSize="15dp" />
+                <Button
+                    android:id="@+id/decrease_Sweets"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:onClick="decreaseSweets"
+                    android:text="-"/>
+                <TextView
+                    android:id="@+id/qty_Sweets"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="15dp"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginRight="15dp"
+                    android:layout_marginBottom="10dp"
+                    android:text="0"
+                    android:textColor="@color/black"
+                    android:textSize="30dp"
+                    android:textStyle="bold" />
+                <Button
+                    android:id="@+id/increase_Sweets"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:onClick="increaseSweets"
+                    android:text="+" />
+            </LinearLayout>
+
+            <!-- Cupcake -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_marginTop="10dp"
+                android:orientation="horizontal">
+                <TextView
+                    android:layout_width="125dp"
+                    android:layout_height="30dp"
+                    android:hint="Cupcake"
+                    android:textColorHint="@color/black"
+                    android:textSize="20dp" />
+                <TextView
+                    android:id="@+id/price_Cupcake"
+                    android:layout_width="20dp"
+                    android:layout_height="30dp"
+                    android:hint="45"
+                    android:textColorHint="@color/black"
+                    android:textSize="15dp" />
+                <TextView
+                    android:layout_width="90dp"
+                    android:layout_height="30dp"
+                    android:hint="K"
+                    android:textColorHint="@color/black"
+                    android:textSize="15dp" />
+                <Button
+                    android:id="@+id/decrease_Cupcake"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:onClick="decreaseCupcake"
+                    android:text="-"/>
+                <TextView
+                    android:id="@+id/qty_Cupcake"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="15dp"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginRight="15dp"
+                    android:layout_marginBottom="10dp"
+                    android:text="0"
+                    android:textColor="@color/black"
+                    android:textSize="30dp"
+                    android:textStyle="bold" />
+                <Button
+                    android:id="@+id/increase_Cupcake"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:onClick="increaseCupcake"
+                    android:text="+" />
+            </LinearLayout>
+
+            <!-- Doughnut -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_marginTop="10dp"
+                android:orientation="horizontal">
+                <TextView
+                    android:layout_width="125dp"
+                    android:layout_height="30dp"
+                    android:hint="Doughnut"
+                    android:textColorHint="@color/black"
+                    android:textSize="20dp" />
+                <TextView
+                    android:id="@+id/price_Doughnut"
+                    android:layout_width="20dp"
+                    android:layout_height="30dp"
+                    android:hint="45"
+                    android:textColorHint="@color/black"
+                    android:textSize="15dp" />
+                <TextView
+                    android:layout_width="90dp"
+                    android:layout_height="30dp"
+                    android:hint="K"
+                    android:textColorHint="@color/black"
+                    android:textSize="15dp" />
+                <Button
+                    android:id="@+id/decrease_Doughnut"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:onClick="decreaseDoughnut"
+                    android:text="-"/>
+                <TextView
+                    android:id="@+id/qty_Doughnut"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="15dp"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginRight="15dp"
+                    android:layout_marginBottom="10dp"
+                    android:text="0"
+                    android:textColor="@color/black"
+                    android:textSize="30dp"
+                    android:textStyle="bold" />
+                <Button
+                    android:id="@+id/increase_Doughnut"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:onClick="increaseDoughnut"
+                    android:text="+" />
+            </LinearLayout>
+
+            <!-- Croissant -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_marginTop="10dp"
+                android:orientation="horizontal">
+                <TextView
+                    android:layout_width="125dp"
+                    android:layout_height="30dp"
+                    android:hint="Croissant"
+                    android:textColorHint="@color/black"
+                    android:textSize="20dp" />
+                <TextView
+                    android:id="@+id/price_Croissant"
+                    android:layout_width="20dp"
+                    android:layout_height="30dp"
+                    android:hint="40"
+                    android:textColorHint="@color/black"
+                    android:textSize="15dp" />
+                <TextView
+                    android:layout_width="90dp"
+                    android:layout_height="30dp"
+                    android:hint="K"
+                    android:textColorHint="@color/black"
+                    android:textSize="15dp" />
+                <Button
+                    android:id="@+id/decrease_Croissant"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:onClick="decreaseCroissant"
+                    android:text="-"/>
+                <TextView
+                    android:id="@+id/qty_Croissant"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="15dp"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginRight="15dp"
+                    android:layout_marginBottom="10dp"
+                    android:text="0"
+                    android:textColor="@color/black"
+                    android:textSize="30dp"
+                    android:textStyle="bold" />
+                <Button
+                    android:id="@+id/increase_Croissant"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:onClick="increaseCroissant"
+                    android:text="+" />
+            </LinearLayout>
+
+            <!-- Cheesecake -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_marginTop="10dp"
+                android:orientation="horizontal">
+                <TextView
+                    android:layout_width="125dp"
+                    android:layout_height="30dp"
+                    android:hint="Cheesecake"
+                    android:textColorHint="@color/black"
+                    android:textSize="20dp" />
+                <TextView
+                    android:id="@+id/price_Cheesecake"
+                    android:layout_width="20dp"
+                    android:layout_height="30dp"
+                    android:hint="25"
+                    android:textColorHint="@color/black"
+                    android:textSize="15dp" />
+                <TextView
+                    android:layout_width="90dp"
+                    android:layout_height="30dp"
+                    android:hint="K"
+                    android:textColorHint="@color/black"
+                    android:textSize="15dp" />
+                <Button
+                    android:id="@+id/decrease_Cheesecake"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:onClick="decreaseCheesecake"
+                    android:text="-"/>
+                <TextView
+                    android:id="@+id/qty_Cheesecake"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="15dp"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginRight="15dp"
+                    android:layout_marginBottom="10dp"
+                    android:text="0"
+                    android:textColor="@color/black"
+                    android:textSize="30dp"
+                    android:textStyle="bold" />
+                <Button
+                    android:id="@+id/increase_Cheesecake"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:onClick="increaseCheesecake"
+                    android:text="+" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+                <TextView
+                    android:layout_width="180dp"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="15dp"
+                    android:layout_marginTop="5dp"
+                    android:text="Total Price:"
+                    android:textColor="@color/black"
+                    android:textSize="30dp"
+                    android:textStyle="bold" />
+                <TextView
+                    android:layout_width="45dp"
+                    android:layout_height="match_parent"
+                    android:layout_marginTop="5dp"
+                    android:text="Rp."
+                    android:textColor="@color/black"
+                    android:textSize="30dp"
+                    android:textStyle="bold" />
+                <TextView
+                    android:id="@+id/qty_TotalPrice"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginRight="5dp"
+                    android:text="0"
+                    android:textColor="@color/black"
+                    android:textSize="30dp"
+                    android:textStyle="bold" />
+                <TextView
+                    android:layout_width="45dp"
+                    android:layout_height="match_parent"
+                    android:layout_marginTop="5dp"
+                    android:text="K"
+                    android:textColor="@color/black"
+                    android:textSize="30dp"
+                    android:textStyle="bold" />
+            </LinearLayout>
+
+
+            <EditText
+                android:id="@+id/txt_ordernote"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:layout_marginBottom="20dp"
+                android:hint="Order Note"
+                android:textColorHint="@color/black"
+                android:inputType="textCapSentences"
+                android:maxLines="1"/>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:gravity="center">
+                <Button
+                    android:id="@+id/btn_updateorder"
+                    android:layout_width="200dp"
+                    android:layout_height="wrap_content"
+                    android:text="UPDATE" />
+                <Button
+                    android:id="@+id/btn_cancel"
+                    android:layout_width="200dp"
+                    android:layout_height="wrap_content"
+                    android:backgroundTint="@color/C4"
+                    android:text="CANCEL" />
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+
+
+</LinearLayout>
